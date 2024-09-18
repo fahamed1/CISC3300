@@ -1,0 +1,27 @@
+CISC 3300 SP24 
+Homework 1 
+
+1. What is HTML? What does it do? 
+HTML is a markup language. It helps determine the layout of a page and how it’ll be displayed with text, images, and other elements added. HTML is made up of several different elements.
+
+2. What is CSS? What does it do? 
+CSS stands for Cascading Style Sheets. CSS is utilized to better design the visuals of a webpage and increase its usability. CSS has rules that specify the appearance of content.  
+
+3. Access https://www.fordham.edu/. In your own words, describe how this webpage uses structure to convey meaning and navigation options to the user. 
+
+The Fordham website utilizes some standard structure rules. On the top is a navigation bar to help users navigate to what pages they’re looking for. Recent and relevant news/articles are highlighted in the middle of the page to get users to read them. The page generally highlights content for viewers who might not be students/faculty who are looking to learn more. Different sections are broken down into different parts, each containing a specific type of content such as Events, exploring different campuses, etc. 
+
+4. What is an HTML element? Tag? Attribute? 
+An HTML element is composed of start and end tags with content between them that gets displayed on the page depending on the element type. Some examples include headers, paragraphs, tables, and more. In most cases, tags are made up of <> opening and </>closing tags. Attributes consist of a name and a value, which tells us more about the elements. 
+
+5. What are the parts of a CSS rule?
+CSS rules contain a selector and a declaration. Selectors are used to select the HTML elements for style. Declarations have a property and a value and are put inside curly brackets.   
+
+6. Explain how CSS rules cascade. 
+CSS cascading is useful when more than one rule is applied to the same element. Making the selectors more specific will precede other selectors, i.e. ID over class. Inheritance is another way, which means when styles are applied to a parent element, child elements will also be affected unless they are specified not to. In addition, unless specified, styles that are declared later in the page precede earlier declarations. 
+
+7. If you have a directory called project-1 that contains two subdirectories, html-files and images. In the html-files directory you have an HTML file called html-1.html that has an img element with a src attribute, write out the value of the src attribute to access an image file called pinecone.jpg in the images directory. 
+src="./images/pinecone.jpg"
+
+8. What is the default behavior when submitting a HTML form? 
+The default behavior is that it tries to send the data to the current webpage and amends the form value to the URL.
