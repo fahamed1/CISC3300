@@ -21,7 +21,7 @@ CSS rules contain a selector and a declaration. Selectors are used to select the
 CSS cascading is useful when more than one rule is applied to the same element. Making the selectors more specific will precede other selectors, i.e. ID over class. Inheritance is another way, which means when styles are applied to a parent element, child elements will also be affected unless they are specified not to. In addition, unless specified, styles that are declared later in the page precede earlier declarations. 
 
 7. If you have a directory called project-1 that contains two subdirectories, html-files and images. In the html-files directory you have an HTML file called html-1.html that has an img element with a src attribute, write out the value of the src attribute to access an image file called pinecone.jpg in the images directory. 
-src="./images/pinecone.jpg"
+src=".../images/pinecone.jpg"
 
 8. What is the default behavior when submitting a HTML form? 
 The default behavior is that it tries to send the data to the current webpage and amends the form value to the URL.
