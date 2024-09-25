@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <head>
+        <title>In class 4</title>
+
+        <script>
+            const firstObject = {
+                name: 'Farhat',
+                echo: function () {
+                    console.log(this.name) 
+                }
+            };
+
+            firstObject.echo();
+
+            firstObject.name = 'Ahamed';
+
+            firstObject.echo();
+            
+        </script>
+    
+    </head>
+
+<body>
+    <script src="in-class-4.js"> </script> 
+   
+</body>
+
+<!--i. create a const variable called firstObject and assign to it an object created via a literal constructor with a property called name and another property called echo. For the value of name put your first namd and for the value of echo add a function to console.log your name(remember to use the this keyword to access the name property of the object) and call the echo method of the firstName object 
+ii. after the echo call from the previous question, update the value of the name to your last name and call echo again, you should have “in-class-4.js loaded!”, “your first name”, “Your last name” as output 
+-->
