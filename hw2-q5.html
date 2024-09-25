@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+    <head>
+        <title>HW 2 Question 5</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <style>
+
+            html, body {
+                font-family: "Raleway", sans-serif;
+                font-optical-sizing: auto;
+                font-style: normal;
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                width: 100%;
+                overflow-x: hidden;
+            }
+
+            .flex-container-1 {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                height: 800px;
+                box-sizing: border-box;
+            }
+
+            .flex-item1 {
+                flex: 0 0 30%;
+                background-color: white;
+                border-right: 1px solid grey;
+                box-sizing: border-box;
+                padding-left: 150px;
+                padding-top: 70px;
+            }
+
+            .flex-item2 {
+                flex: 0 0 70%;
+                background-color: white;
+                margin: 5px;
+                padding: 20px;
+                padding-right: 100px;
+                box-sizing: border-box;
+            }
+
+            .box1 {
+                width: 200px;
+                height: 60px;
+                background-color: #eaecee;
+                padding: 10px;
+                margin: 10px;
+                border-left: 2px solid maroon;
+                font-size: 14px;
+            }
+
+            .box2 {
+                width: 202px;
+                height: 60px;
+                background-color: maroon;
+                padding: 10px;
+                margin: 10px;
+                color: white;
+                text-align: center;
+                justify-content: center;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .flex-item1 h3 {
+                padding: 10px;
+                margin: 10px;
+            }
+
+            img.align-right {
+            float: right;
+            margin-left: 10px;
+            width: 250px;
+            height: 250px;
+            }
+
+            .body-with-img {
+                padding: 30px;
+                padding-bottom: 50px;
+            }
+
+            .box1 a {
+                text-decoration: none;
+                color: black;
+                line-height: 2;
+            }
+
+            .box1 a:hover {
+                text-decoration: underline;
+            }
+
+            .box2-link {
+                text-decoration: none;
+                line-height: 3;
+            }
+
+            .flex-item1 h3 {
+                color: maroon;
+            }
+
+            .nav {
+                font-size: 13px;
+            }
+
+            .nav a{
+                text-decoration: none;
+                color: black;
+            }
+
+            .nav a:hover {
+                text-decoration: underline;
+            }
+
+            .heading {
+                font-size: 50px;
+                color: maroon;
+                padding-top: 30px;
+                padding-bottom: 20px;
+            }
+
+            .body-text a {
+                color: maroon;
+            }
+
+            .body-header2 {
+                font-size: 20px;
+            }
+
+            .flex-item2 p {
+                line-height: 25px;
+            }
+
+        </style>
+
+    </head>
+
+<body>
+    <div class="flex-container-1">
+        <div class="flex-item1">
+
+            <h3>Majors and Minors</h3>
+
+            <div class="box1">
+                <a href="url">What's Your Passion?</a>
+                <a href="url">Accelerated Degree Programs</a>
+            </div>
+
+            <a href="https://www.fordham.edu/undergraduate-admission/majors-and-minors/" class="box2-link">
+            <div class="box2">
+                Majors and Minors
+            </div>
+            </a>
+
+        </div>
+
+        <div class="flex-item2">
+            <!--Top navigation to different links-->
+            <nav class="nav">
+                <a class="nav-link" href="#">    Home   /</a>
+                <a class="nav-link" href="#">Admission and Aid   /</a>
+                <a class="nav-link" href="#">Undergrad Admission   /</a>
+                <a class="nav-link" href="#">Majors and Minors   /</a>
+                <a class="nav-link" href="#">Computer Science</a>
+            </nav>
+
+            <!--Content inside the main body-->
+            <div class="heading">Computer Science</div>
+            <p class="body-text">Degree Options: Major, Minor <br>
+                Locations: Lincoln Center, Rose Hill <br>
+                Visit the <a href="https://www.fordham.edu/academics/departments/computer-and-information-science/">Computer and Information Science Department</a>
+            </p>
+
+            <div class="body-header2">Wherever there’s a computer, there’s a skilled person developing, maintaining, hacking, advancing or simply using it. Be that person.
+            </div>
+
+            <div class="body-with-img">
+                <img src="https://www.fordham.edu/media/review/content-assets/migrated/images/iStock_000021097427Medium.jpg"
+                    alt="Picture" class="align-right" />
+                <p>It’s difficult to imagine life without computers when they’re so central to our information-driven
+                    global society. But it’s not difficult to imagine the amazing pursuits you’ll be prepared for with a
+                    degree in computer science from Fordham’s Department of Computer and Information Sciences. </p>
+                <p>
+                    The computer science major emphasizes science and technology, including software design and 
+                    programming, computer architecture and functions, and the development of an ability to analyze 
+                    and solve problems in using the computer as a tool.</p>
+            </div>
+
+            <div>
+
+            <p>Get inspired by the classes we offer. Programming. Bioinformatics. Robotics. Video game design. Cyber security. Networking. Database management. Health and medical informatics.</p>
+            <p>Our faculty members are active researchers driven by intellectual curiosity and the desire to make an impact. Join them in one of our labs. Requirements: open mind, warm heart, and lots of passion.</p>
+            <p>You’ll learn more than computer science here. You’ll also study philosophy, theology, history, mathematics, languages, and the performing arts through Fordham’s common core curriculum, the centerpiece of our liberal arts education. We want you to excel in your field—and as a human being.</p>
+        </div>
+        </div>
+    </div>
+
+</body>
+
+
+<!--
+You are the web designer for the Computer Science Department at Fordham. 
+You have been asked to design this mock-up for the CS homepage. 
+https://www.fordham.edu/undergraduate-admission/majors-and-minors/computer-scienc e/
+
+a. Try to get as close as possible to the mock up, with colors and the font(Raleway), 
+etc. It does not need to be pixel perfect.  -->
+
+
+
+
+
+
+
+
+
+
+
+

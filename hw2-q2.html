@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <head>
+        <title>HW 2 Question 2</title>
+
+        <style>
+
+            .flex-container {
+                display: flex;
+                justify-content: center;
+            }
+
+            @media (min-width: 500px) {
+                .flex-container {
+                    flex-direction: row;
+                }
+            }
+
+            @media (max-width: 499px) {
+                .flex-container {
+                    flex-direction: column;
+                }
+            }
+            .flex-item {
+                background-color: grey;
+                width: 100px;
+                height: 100px;
+                margin: 5px;
+                padding: 5px;
+            }
+
+        </style>
+    
+    </head>
+
+<body>
+    <div class="flex-container">
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+      </div>
+
+</body>
+
+
+<!--Create a html file with a flex container and three flex items. 
+Give the flex items a color and width/height of 100px. 
+For screens <500px wide have the items flow vertically and >= 
+    500px flow horizontally. -->
