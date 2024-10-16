@@ -1,0 +1,116 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        #description-input {
+            width: 200px;
+            height: 200px;
+        }
+        #submit-button{
+            background-color: seagreen;
+            color: aliceblue;
+        }
+
+        h4 {
+            color: seagreen;
+        }
+
+        h1 {
+            color: darkslategray;
+        }
+
+
+    </style>
+</head>
+
+<body> 
+    <h1>Recipes</h1>
+
+    <div id="recipes"></div>
+
+    <div class="container">
+        <h4>Add your own recipe!</h4>
+        <form id="new-recipes">
+            <div style="margin: 20px 0">
+                <label>Title</label>
+                <input type="text" id='title-input' name="title">
+            </div>
+            <div style="margin: 20px 0">
+                <label>Description</label>
+                <input type="text" id="description-input" name="description"><br/>
+            </div>
+            <div style="margin: 20px 0">
+                <input type="submit" id="submit-button" value="Submit"><br/>
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+    $(document).ready(function() {
+        $.ajax ({
+                url: 'http://localhost:3000/recipes',
+                type: 'GET',
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+
+                    const recipesDiv = document.getElementById('recipes');
+                    data.forEach(function(recipe) {
+                        const recipeDiv = document.createElement('div');
+                        recipeDiv.classList.add('recipe');
+
+                        for (let key in recipe) {
+                            if (key !== 'id') {
+                                const p = document.createElement('p');
+                                p.textContent = `${key}: ${recipe[key]}`;
+                                recipeDiv.appendChild(p);
+                            }
+                        }
+
+                        recipesDiv.appendChild(recipeDiv);
+                    });
+            
+                }, error: function () {
+                        console.log()
+                }
+            });
+        });
+
+        //Code for form 
+        $('#new-recipes').on('submit', function (e) {
+                e.preventDefault();
+                var title = $('#title-input').val();
+                var description = $('#description-input').val();
+
+                const data = {
+                    title: title,
+                    description: description
+                }
+  
+                const serializedJSON = JSON.stringify(data)
+                $.ajax({
+                    url: 'http://localhost:3000/recipes',
+                    type: "POST",
+                    data: serializedJSON,
+                    dataType: "json",
+                    success: function (data) {
+                       
+                        console.log(data);
+                        title = $('#title-input').val('')
+                        title = $('#description-input').val('')
+                    },
+                    error: function () {
+                        console.log()
+                    }
+                });
+
+            });
+
+   </script>
+
+
+</body>
+
+</html>

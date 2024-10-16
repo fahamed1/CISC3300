@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>NYC Subway Temperatures</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+
+    <body>
+        <h3>Temperature in NYC</h3>
+        <div id="temp-data">
+
+        </div>
+        <script>
+
+            $.ajax ({
+                url: 'https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m',
+                type: 'GET',
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    const temp = data.current.temperature_2m;
+
+                    const tempDiv = document.getElementById('temp-data');
+                    if (tempDiv) {
+                        tempDiv.textContent = temp + " °C in NYC 2 meters above ground";
+                     }
+                    
+                }
+            });
+
+            
+
+        </script>
+    </body>
+
+
+</html>
