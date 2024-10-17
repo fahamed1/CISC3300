@@ -17,13 +17,15 @@
                 dataType: "json",
                 success: function (data) {
                     console.log(data);
-                    const temp = data.current.temperature_2m;
+                    const temp = (data.current.temperature_2m * 1.8) + 32;
 
                     const tempDiv = document.getElementById('temp-data');
                     if (tempDiv) {
-                        tempDiv.textContent = temp + " °C in NYC 2 meters above ground";
+                        tempDiv.textContent = temp + " °F in NYC 2 meters above ground";
                      }
                     
+                } , error: function () {
+                        console.log()
                 }
             });
 
