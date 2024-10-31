@@ -1,31 +1,19 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-class userCrontroller {
-    public function serveHTML() {
+require 'controller/UserController.php';
+require 'model/ClassModel.php';
 
-    }
+use controller\UserController;
+ 
+$controller = new UserController();
 
-    public function serveJSON() {
-
-    }
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && $_SERVER['REQUEST_URI'] === '/users') {
+    $controller->serveJSON();
+} else {
+    $controller->serveHTML();
 }
-
-class userModel {
-    public function getAllUsers() {
-        return [
-            [
-                'age' => 32, 'name' => 'Kitty'
-            ],
-            [
-                'age' => 21,'name' => 'Bilal'
-            ],
-            [
-                'age' => 3,'name' => 'Mary'
-            ]
-        ];
-    }
-}
-
-$_SERVER 
 
 ?>

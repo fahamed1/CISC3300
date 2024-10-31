@@ -5,14 +5,36 @@
 
 
 <body>
+    <h4>Users</h4>
+    <div id="users-div"></div>
+
 
     <script>
+        $.ajax({
+            url: `/users`,
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+            $('#users-div').html(''); 
+
+            $.each(data, function (index, user) {
+            $('#users-div').append(`
+                <div class="user">
+                    <p>Age: ${user.age}</p>
+                    <p>Name: ${user.name}</p>
+                </div>
+            `);
+            });
+        },
+        error: function (error) {
+            console.error('Error fetching user data:', error);
+            $('#users-div').html('<p>Cannot find user data.</p>');
+        }
+    });
+
 
     </script>
 
 </body>
 
 </html>
-
-create a views directory with an html page with ajax code to make a request to your 
-backend and display json data as HTML elements, style it to look halfway decent.
