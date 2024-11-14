@@ -1,4 +1,4 @@
-CREATE DATABASE `homewoork_9`;
+CREATE DATABASE `homework_9`;
 
 CREATE TABLE `library`
 (
